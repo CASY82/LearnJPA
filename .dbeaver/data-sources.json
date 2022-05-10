@@ -1,0 +1,33 @@
+{
+	"folders": {},
+	"connections": {
+		"mariaDB-180ae05cbd5-3d26b697da5d95c8": {
+			"provider": "mysql",
+			"driver": "mariaDB",
+			"name": "jspdb",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "jspdb",
+				"url": "jdbc:mysql://localhost:3306/jspdb",
+				"home": "mysql_client",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
