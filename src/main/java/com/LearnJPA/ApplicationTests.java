@@ -13,6 +13,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import com.LearnJPA.jpabook.start.Member;
+import com.LearnJPA.jpabook.start.MemberRepository;
  
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -55,4 +58,5 @@ class Example2ApplicationTests {
         Optional<Customer> result=customerRepository.findById(1L);
         System.out.println("queryTest: "+result);
     }
+    
 }

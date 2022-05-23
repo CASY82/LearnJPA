@@ -1,4 +1,4 @@
-package jpabook.start;
+package com.LearnJPA.jpabook.start;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -43,18 +43,17 @@ public class MemberTest {
         }
     }
     
-// 다른 패키지에서 다른 소스 테스트 하는 방법 찾는중    
-//    @Autowired
-//    MemberRepository memberRepository;
-//    
-//    @PostConstruct
-//    public void init() {
-//        memberRepository.save(new Member("Man1", 12));
-//    }
-//    
-//    @Test
-//    void queryTest() throws SQLException, ClassNotFoundException {
-//        Optional<Member> result=memberRepository.findById(1L);
-//        System.out.println("queryTest: "+result);
-//    }
+    @Autowired
+    MemberRepository memberRepository;
+    
+    @PostConstruct
+    public void init() {
+        memberRepository.save(new Member("test1", "Man1", 12));
+    }
+    
+    @Test
+    void queryTest() throws SQLException, ClassNotFoundException {
+        Optional<Member> result=memberRepository.findById("test1");
+        System.out.println("queryTest: "+result);
+    }
 }

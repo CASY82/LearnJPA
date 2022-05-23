@@ -1,4 +1,4 @@
-package jpabook.start;
+package com.LearnJPA.jpabook.start;
 
 import javax.persistence.*;
 
@@ -16,7 +16,12 @@ public class Member {
 	// 매핑 정보를 빼보면?
 	private Integer age;
 	
-	public Member(String username, Integer age) {
+	public Member() {
+		super();
+	}
+
+	public Member(String id, String username, Integer age) {
+		this.id = id;
 		this.username = username;
 		this.age = age;
 	}
